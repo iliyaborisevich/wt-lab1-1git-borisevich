@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как я провёл лето</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+      color: #fff;
+      border-radius: 0 0 1.5rem 1.5rem;
+    }
+
+    .media-slot {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background-color: #e9ecef;
+      border: 2px dashed #adb5bd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c757d;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      position: relative;
+    }
+
+    .media-slot.has-media {
+      border: none;
+      padding: 0;
+      background: #000;
+      cursor: zoom-in;
+    }
+
+    .media-slot img,
+    .media-slot video,
+    .media-slot iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .media-slot.has-media:hover img,
+    .media-slot.has-media:hover video,
+    .media-slot.has-media:hover iframe {
+      transform: scale(1.05);
+    }
+
+    .card .media-slot {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .timeline-item {
+      border-left: 4px solid #0d6efd;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background-color: #212529;
+      color: #adb5bd;
+    }
+
+    .media-modal .modal-content {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .media-modal .modal-body {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+    }
+
+    .media-modal img,
+    .media-modal video,
+    .media-modal iframe {
+      max-width: 92vw;
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.75rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      background: #000;
+      display: block;
+    }
+
+    .media-modal .btn-close {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+      filter: invert(1) brightness(2);
+      opacity: 0.9;
+      z-index: 10;
+    }
+
+    .media-modal .btn-close:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold">Как я провёл лето</h1>
+          <p class="lead mb-0">
+            Учёба, фестиваль народов в Гродно, экзамены, практика,
+            каникулы, деревня, город, дом, покупка машины, Могилёв, зоосад,
+            фонтаны, рыбалка, заселение в общагу.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="аист.JPG">
+              <img src="аист.JPG" alt="аист" loading="lazy">
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="mb-5">
+      <h2 class="h3 mb-3">Вкратце о лете</h2>
+      <p>
+        Это лето получилось очень насыщенным: оно началось с учёбы, затем была
+        рабочая поездка на фестиваль народов в Гродно, потом экзамены и практика
+        в УДФР КГК. После этого наконец-то начались каникулы — отдых в деревне,
+        в городе и дома. Ближе к концу лета я купил машину, съездил на ней в
+        Могилёв, побывал в зоосаде и на фонтанах, вернулся домой и ещё успел
+        выбраться на рыбалку. А в самом конце лета было заселение в общагу.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h3 mb-4">Основные события</h2>
+
+      <div class="row g-4">
+
+        <!-- учёба -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="ау.jfif">
+              <img src="ау.jfif" alt="ау" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Начало лета: учёба</h3>
+              <p class="card-text">
+                Лето началось с учёбы. Пришлось совмещать подготовку к экзаменам
+                с текущими делами, но это дало хороший старт.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Гродно -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="гродно.JPG">
+              <img src="гродно.JPG" alt="Гродно" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Рабочая поездка в Гродно</h3>
+              <p class="card-text">
+                Поездка на фестиваль народов в Гродно запомнилась атмосферой,
+                культурой разных народов и новыми впечатлениями.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- экзамены -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="экз.jfif">
+              <img src="экз.jfif" alt="экз" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Экзамены</h3>
+              <p class="card-text">
+                Следующий этап — экзамены. Волнение, подготовка и, наконец,
+                заслуженный результат.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--практика -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="практика.jpg">
+              
+              <img src="практика.jpg" alt="практика" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Практика в УДФР КГК</h3>
+              <p class="card-text">
+                Практика в УДФР КГК дала полезный опыт, познакомила с реальной
+                работой и помогла лучше понять будущую профессию.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- каникулы -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="video"
+                 data-media-src="видноч.mp4">
+              <video autoplay muted loop playsinline>
+                <source src="видноч.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Каникулы: деревня, город, дом</h3>
+              <p class="card-text">
+                Наконец-то начались каникулы. Отдыхал в деревне, в городе и дома —
+                восстанавливал силы и наслаждался свободным временем.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- машина -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="гольф.jpg">
+              
+              <img src="гольф1.jpg" alt="Машина" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Покупка машины</h3>
+              <p class="card-text">
+                Ближе к концу лета я купил машину. Это стало важным событием и
+                открыло новые возможности для поездок.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Могилёв -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="могилев.JPG">
+              <img src="могилев.jpg" alt="Могилёв" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Поездка в Могилёв</h3>
+              <p class="card-text">
+                На новой машине я поехал в Могилёв. Побывал в зоосаде и на
+                фонтанах — отличные впечатления и красивые виды.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- рыбалка -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="video"
+                 data-media-src="рыбалка.mp4">
+              <video autoplay muted loop playsinline>
+                <source src="рыбалка.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Рыбалка</h3>
+              <p class="card-text">
+                Вернувшись домой, я ещё успел съездить на рыбалку. Тишина,
+                природа и возможность немного отвлечься от суеты.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- заселение в общагу -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="media-slot has-media"
+                 data-bs-toggle="modal"
+                 data-bs-target="#mediaModal"
+                 data-media-type="image"
+                 data-media-src="общага.JPG">
+              <img src="общага.jpg" alt="общага" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">Заселение в общагу</h3>
+              <p class="card-text">
+                В самом конце лета было заселение в общежитие: новые соседи,
+                бытовые хлопоты и атмосфера студенческой жизни.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2026. Сайт «Как я провёл лето». Лабораторная работа №1.</p>
+    </div>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal fade media-modal" id="mediaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        <div class="modal-body" id="mediaModalBody">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <script>
+    const mediaModalEl = document.getElementById('mediaModal');
+    const modalBody = document.getElementById('mediaModalBody');
+    mediaModalEl.addEventListener('show.bs.modal', function (event) {
+      const trigger = event.relatedTarget;
+      const type = trigger.getAttribute('data-media-type');
+      const src = trigger.getAttribute('data-media-src');
+
+      if (type === 'video') {
+        modalBody.innerHTML = `
+          <video autoplay muted loop playsinline controls>
+            <source src="${src}" type="video/mp4">
+          </video>`;
+      } else {
+        modalBody.innerHTML = `<img src="${src}" alt="Просмотр">`;
+      }
+    });
+    mediaModalEl.addEventListener('hidden.bs.modal', function () {
+      modalBody.innerHTML = '';
+    });
+  </script>
+
+</body>
+</html>
