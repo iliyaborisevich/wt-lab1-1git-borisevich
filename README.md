@@ -1,1 +1,1 @@
-https://github.com/iliyaborisevich/wt-lab1-1git-borisevich/index.html
+https://iliyaborisevich.github.io/wt-lab1-1git-borisevich/index.html
